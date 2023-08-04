@@ -8,6 +8,7 @@ import { useEffect } from 'react';
 const cx = classNames.bind(styles);
 
 const add = createEvent()
+const clear = createEvent()
 const remove = createEvent()
 
 const fetchDamageFx = createEffect(async () => {
@@ -18,6 +19,7 @@ const fetchDamageFx = createEffect(async () => {
 const $damage = createStore([])
   .on(add, (damage, newDamage) => [...damage, newDamage])
   .on(remove, (damage, index) => damage.filter((item) => item !== index))
+  .on(clear, () => [])
   .on(fetchDamageFx.doneData, (_, data) => [...Object.values(data)])
 
 
@@ -37,16 +39,16 @@ function App() {
   }
 
   const sendData = async () => {
-    // const config = {
-    //   method: 'post',
-    //   url: 'https://myfailemtions.npkn.net/b944ff/\'',
-    //   headers: {
-    //     'Content-Type': 'application/json'
-    //   },
-    //   data: damage
-    // };
-    // await axios(config)
-    await new Promise((resolve) => setTimeout(resolve(), 2500))
+    const config = {
+      method: 'post',
+      url: 'https://myfailemtions.npkn.net/b944ff/\'',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      data: damage
+    };
+    await axios(config)
+    clear()
   }
 
   return (
