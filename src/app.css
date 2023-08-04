@@ -1,0 +1,76 @@
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../src/images/1651182835_2-sportishka-com-p-mashina-vid-sverkhu-mashini-krasivo-foto-2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border: 4px solid #000;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+}
+
+.box-a {
+    padding: 0 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 400px;
+}
+
+.box-b {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 300px;
+}
+
+.box-b_front {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.box-b_back {
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.A1,
+.A2,
+.A3,
+.A4,
+.B1,
+.B2,
+.B3,
+.B4,
+.B5,
+.C1,
+.C2,
+.C3,
+.C4 {
+    background-color: #b9671b;
+
+}
+
+.send {
+    background-color: blue;
+    border-radius: 10px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+
+}
